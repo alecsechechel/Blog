@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA0D0D9B1C53DE1F007838C1"
+               BlueprintIdentifier = "FA0D0EE81C53EF0B007838C1"
                BuildableName = "Localization.app"
                BlueprintName = "Localization"
                ReferencedContainer = "container:Localization.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA0D0DAF1C53DE20007838C1"
+               BlueprintIdentifier = "FA0D0EFC1C53EF0C007838C1"
                BuildableName = "LocalizationTests.xctest"
                BlueprintName = "LocalizationTests"
                ReferencedContainer = "container:Localization.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA0D0DBA1C53DE20007838C1"
+               BlueprintIdentifier = "FA0D0F071C53EF0C007838C1"
                BuildableName = "LocalizationUITests.xctest"
                BlueprintName = "LocalizationUITests"
                ReferencedContainer = "container:Localization.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA0D0D9B1C53DE1F007838C1"
+            BlueprintIdentifier = "FA0D0EE81C53EF0B007838C1"
             BuildableName = "Localization.app"
             BlueprintName = "Localization"
             ReferencedContainer = "container:Localization.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA0D0D9B1C53DE1F007838C1"
+            BlueprintIdentifier = "FA0D0EE81C53EF0B007838C1"
             BuildableName = "Localization.app"
             BlueprintName = "Localization"
             ReferencedContainer = "container:Localization.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA0D0D9B1C53DE1F007838C1"
+            BlueprintIdentifier = "FA0D0EE81C53EF0B007838C1"
             BuildableName = "Localization.app"
             BlueprintName = "Localization"
             ReferencedContainer = "container:Localization.xcodeproj">

@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Localization
+
+  Created by Alex on 23.01.16.
+  Copyright © 2016 oleksii. All rights reserved.
+*/
+TITLE = "Сообщение";
+MESSAGE = "Хорошая работа!";

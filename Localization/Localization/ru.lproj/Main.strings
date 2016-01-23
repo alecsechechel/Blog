@@ -1,0 +1,6 @@
+
+/* Class = "UILabel"; text = "Hello world!"; ObjectID = "8mC-qa-ZAI"; */
+"8mC-qa-ZAI.text" = "Привет Ворд!";
+
+/* Class = "UIButton"; normalTitle = "Show message"; ObjectID = "rHS-2X-XzW"; */
+"rHS-2X-XzW.normalTitle" = "Показать сообщение";
