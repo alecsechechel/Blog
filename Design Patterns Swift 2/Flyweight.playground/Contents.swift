@@ -2,46 +2,69 @@
 import UIKit
 
 class MikeMyers {
+    
     let name: String
     let skills: Int
     
     var role: String?
-    var suit: String?
     var age: Int?
     
-    init(name: String, skills: Int) {
-        self.name = name
-        self.skills = skills
-        print("Create unit")
+    init() {
+        self.name = "Mike Myers"
+        self.skills = 80
+        print("Created object")
     }
     
-    convenience init() {
-        self.init(name: "Mike Myers", skills: 90)
-    }
-    
-    func getInfo() {
-        if let role = role, let suit = suit, let age = age {
-            print("Role - \(role), suit - \(suit), age - \(age)")
+    func getInfo() -> String {
+        if let role = role, let age = age {
+            return "Role - \(role), age - \(age)"
+        } else {
+            return "No role"
         }
     }
 }
 
-var mikeMyers = MikeMyers()
+let mike = MikeMyers()
+mike.getInfo()
 
-//Austin Powers
-mikeMyers.role = "Austin Powers"
-mikeMyers.suit = "Austin Powers suit"
-mikeMyers.age = 27
-mikeMyers.getInfo()
+mike.role = "Dr. Evil"
+mike.age = 55
+mike.getInfo()
 
-//Dr. Evil
-mikeMyers.role = "Dr. Evil"
-mikeMyers.suit = "Dr. Evil suit"
-mikeMyers.age = 35
-mikeMyers.getInfo()
+mike.role = "Austin Pawers"
+mike.age = 25
+mike.getInfo()
 
-//Dr. Evil
-mikeMyers.role = "Fat Bastard"
-mikeMyers.suit = "Fat Bastard suit"
-mikeMyers.age = 50
-mikeMyers.getInfo()
+mike.role = "Fat Man"
+mike.age = 50
+mike.getInfo()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
