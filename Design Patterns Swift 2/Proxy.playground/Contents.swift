@@ -6,9 +6,9 @@ protocol IHuman {
     func getName() -> String
 }
 
-class Operator: IHuman {
+class Ronaldo: IHuman {
     func move() -> String {
-        return "Run"
+        return "run"
     }
     
     func getName() -> String {
@@ -24,7 +24,7 @@ class Surogate: IHuman {
     }
     
     func move() -> String {
-       return owner.move()
+        return owner.move()
     }
     
     func getName() -> String {
@@ -32,10 +32,16 @@ class Surogate: IHuman {
     }
 }
 
-let ronaldo = Operator()
+let ronaldo = Ronaldo()
 let player1 = Surogate(owner: ronaldo)
-player1.getName()
 player1.move()
+player1.getName()
+
+
+
+
+
+
 
 
 
