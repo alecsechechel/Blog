@@ -8,7 +8,7 @@ protocol Command {
 class OnCommand: Command {
     let devices: String
     
-    required init(devices: String) {
+    init(devices: String) {
         self.devices = devices
     }
     
@@ -20,7 +20,7 @@ class OnCommand: Command {
 class OffCommand: Command {
     let devices: String
     
-    required init(devices: String) {
+    init(devices: String) {
         self.devices = devices
     }
     
@@ -29,7 +29,7 @@ class OffCommand: Command {
     }
 }
 
-class Device {
+class Devices {
     let onCommand: Command
     let offCommand: Command
     
@@ -38,24 +38,18 @@ class Device {
         self.offCommand = OffCommand(devices: devices)
     }
     
-    func off() -> String {
-        return offCommand.execute()
-    }
-    
     func on() -> String {
         return onCommand.execute()
     }
+    
+    func off() -> String {
+        return offCommand.execute()
+    }
 }
 
-let tv = Device(devices: "Samsung")
-tv.off()
+let tv = Devices(devices: "Samsung")
 tv.on()
-
-let phone = Device(devices: "iPhone")
-phone.on()
-phone.off()
-
-
+tv.off()
 
 
 
