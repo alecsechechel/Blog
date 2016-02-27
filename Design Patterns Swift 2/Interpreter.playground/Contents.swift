@@ -1,17 +1,13 @@
-//: Interpreter
-
 import UIKit
 
-//interpretator
 protocol IntegerExp {
     func evaluate(context: IntegerContext) -> Int
     func replace(character: Character, integerExp: IntegerExp) -> IntegerExp
     func copy() -> IntegerExp
 }
 
-//язык
 class IntegerContext {
-    private var data: [Character:Int] = [:]
+    private var data:[Character: Int] = [:]
     
     func lookup(name: Character) -> Int {
         return self.data[name]!
@@ -22,7 +18,6 @@ class IntegerContext {
     }
 }
 
-//литерал
 class IntegerVarExp: IntegerExp {
     let name: Character
     
@@ -34,7 +29,7 @@ class IntegerVarExp: IntegerExp {
         return context.lookup(self.name)
     }
     
-    func replace(name: Character, integerExp: IntegerExp) -> IntegerExp {
+    func replace(character: Character, integerExp: IntegerExp) -> IntegerExp {
         if name == self.name {
             return integerExp.copy()
         } else {
@@ -47,52 +42,50 @@ class IntegerVarExp: IntegerExp {
     }
 }
 
-//правила
 class AddExp: IntegerExp {
-    private var operand1: IntegerExp
-    private var operand2: IntegerExp
+    private var op1: IntegerExp
+    private var op2: IntegerExp
     
     init(op1: IntegerExp, op2: IntegerExp) {
-        self.operand1 = op1
-        self.operand2 = op2
+        self.op1 = op1
+        self.op2 = op2
     }
     
     func evaluate(context: IntegerContext) -> Int {
-        return self.operand1.evaluate(context) + self.operand2.evaluate(context)
+        return self.op1.evaluate(context) + self.op2.evaluate(context)
     }
     
     func replace(character: Character, integerExp: IntegerExp) -> IntegerExp {
-        return AddExp(op1: operand1.replace(character, integerExp: integerExp),
-            op2: operand2.replace(character, integerExp: integerExp))
+        return AddExp(op1: op1.replace(character, integerExp: integerExp), op2: op2.replace(character, integerExp: integerExp))
     }
     
     func copy() -> IntegerExp {
-        return AddExp(op1: self.operand1, op2: self.operand2)
-    }
-}
-
-class MultiplyExp: AddExp {
-
-    override func evaluate(context: IntegerContext) -> Int {
-        return self.operand1.evaluate(context) * self.operand2.evaluate(context)
-    }
-    
-    override func copy() -> IntegerExp {
-        return MultiplyExp(op1: self.operand1, op2: self.operand1)
+        return AddExp(op1: self.op1, op2: self.op2)
     }
 }
 
 var expression: IntegerExp?
-var intContext = IntegerContext()
+var integerContext = IntegerContext()
 
-var a = IntegerVarExp(name: "A")
-var b = IntegerVarExp(name: "B")
-var c = IntegerVarExp(name: "C")
+var a = IntegerVarExp(name: "a")
+var b = IntegerVarExp(name: "b")
+var c = IntegerVarExp(name: "c")
 
-expression = MultiplyExp(op1: a, op2: AddExp(op1: b, op2: c)) // a * (b + c)
+expression = AddExp(op1: a, op2: AddExp(op1: b, op2: c)) // a + (b + c)
 
-intContext.assign(a, value: 2)
-intContext.assign(b, value: 1)
-intContext.assign(c, value: 3)
+integerContext.assign(a, value: 2)
+integerContext.assign(b, value: 6)
+integerContext.assign(c, value: 3)
 
-var result = expression?.evaluate(intContext)
+var result = expression?.evaluate(integerContext)
+
+
+
+
+
+
+
+
+
+
+
